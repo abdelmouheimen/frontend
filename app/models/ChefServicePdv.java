@@ -17,6 +17,7 @@ public class ChefServicePdv extends Model {
     public String prenom;
     public String passwd;
     public Long tel;
+    public Float pond;
     @OneToOne
     public ChefDepartementIndirect cdi;
     @OneToMany(mappedBy="csp")
