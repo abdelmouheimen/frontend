@@ -19,8 +19,12 @@ public class Client extends Model {
     public Long tel;
     public Long cin;
     public String adresse;
-    @ManyToMany(mappedBy="client")
-    public List<Vendeur> vendeur;
-    @ManyToMany(mappedBy="client")
+    @ManyToMany
+    public List<Conseiller> conseiller;
+    @ManyToMany
+    public List<Pdv> pdv;
+    @ManyToMany
+    public List<Distributeur> distributeur;
+    @ManyToMany
     public List<Produit> produit;
 }

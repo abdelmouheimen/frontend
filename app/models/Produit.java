@@ -15,10 +15,18 @@ public class Produit extends Model {
     @Id
     public Long id;
     public String type;
-    @ManyToMany(mappedBy="produit")
-    public List<Vendeur> vendeur;
-    @ManyToMany(mappedBy="produit")
-    public List<Commissionnnement> commissionnnement;
     @ManyToMany
+    public List<Conseiller> conseiller;
+    @ManyToMany
+    public List<Pdv> pdv;
+    @ManyToMany
+    public List<Distributeur> distributeur;
+    @ManyToMany(mappedBy="produit")
+    public List<CommissionnementConseiller> cc;
+    @ManyToMany(mappedBy="produit")
+    public List<CommissionnementDistributeur> cd;
+    @ManyToMany(mappedBy="produit")
+    public List<CommissionnementPdv> cp;
+    @ManyToMany(mappedBy="produit")
     public List<Client> client;
 }
